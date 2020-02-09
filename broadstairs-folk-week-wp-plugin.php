@@ -148,3 +148,5 @@ add_action('init', 'link_artist_cpt_to_events');
 add_action('cmb2_admin_init', 'bfw_cmb2_artist_metaboxes');
 register_activation_hook(__FILE__, 'bfw_activate');
 register_deactivation_hook(__FILE__, 'bfw_deactivate');
+
+require 'functions/artist.php';

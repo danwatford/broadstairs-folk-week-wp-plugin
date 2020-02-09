@@ -28,6 +28,7 @@ function bfw_setup_artist_post_type()
     $labels = array(
         'name' => _x('Artist', 'post type general name'),
         'singular_name' => _x('Artist', 'post type singular name'),
+        'singular_name_lowercase' => esc_html_x('artist', 'post type singular name'),
         'add_new' => _x('Add New Artist', 'Artist'),
         'add_new_item' => __('Add New Artist'),
         'edit_item' => __('Edit Artist'),
@@ -75,6 +76,13 @@ function bfw_setup_artist_post_taxonomy()
         'query_var' => true,
         'rewrite' => array('slug' => 'artist-category'),
     ));
+}
+
+function link_artist_cpt_to_events()
+{
+    if (function_exists('tribe_register_linked_post_type')) {
+        tribe_register_linked_post_type('artist');
+    }
 }
 
 function bfw_cmb2_artist_metaboxes()
@@ -136,6 +144,7 @@ function bfw_deactivate()
 
 add_action('init', 'bfw_setup_artist_post_type');
 add_action('init', 'bfw_setup_artist_post_taxonomy', 0);
+add_action('init', 'link_artist_cpt_to_events');
 add_action('cmb2_admin_init', 'bfw_cmb2_artist_metaboxes');
 register_activation_hook(__FILE__, 'bfw_activate');
 register_deactivation_hook(__FILE__, 'bfw_deactivate');

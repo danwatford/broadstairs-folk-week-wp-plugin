@@ -46,7 +46,7 @@ function bfw_setup_artist_post_type()
         'public' => true,
         'rewrite' => array("slug" => "artist"),
         'menu_position' => 7,
-        'supports' => array('title', 'editor', 'thumbnail'),
+        'supports' => array('title', 'editor', 'thumbnail', 'page-attributes'),
         'has_archive' => true,
     );
     register_post_type('artist', $args);

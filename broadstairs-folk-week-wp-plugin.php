@@ -54,9 +54,3 @@ register_deactivation_hook(__FILE__, 'bfw_deactivate');
 require 'functions/register-artist-cpt.php';
 require 'functions/artist.php';
 require 'functions/the-event-calendar-config.php';
-
-
-function bfw_foo() {
-    echo "<h1>FOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO</h1><tr>BAAAAAAAAAAAAAAAAAR<td>BAAAAAAAAAAAAZ</td></td></tr>";
-}
-add_action('tribe_events_venue_before_metabox', 'bfw_foo');

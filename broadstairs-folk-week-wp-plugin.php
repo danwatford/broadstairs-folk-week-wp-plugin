@@ -150,3 +150,4 @@ register_activation_hook(__FILE__, 'bfw_activate');
 register_deactivation_hook(__FILE__, 'bfw_deactivate');
 
 require 'functions/artist.php';
+require 'functions/the-event-calendar-config.php';

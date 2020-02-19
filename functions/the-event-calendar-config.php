@@ -29,11 +29,7 @@ function bfw_tribe_remove_organizers_from_events($default_types)
 function bfw_link_artist_cpt_to_events()
 {
     if (function_exists('tribe_register_linked_post_type')) {
-        bfw_write_log("Before linked post registering");
-        bfw_write_log(Tribe__Events__Linked_Posts::instance()->get_linked_post_types());
         tribe_register_linked_post_type('artist');
-        bfw_write_log("After linked post registering");
-        bfw_write_log(Tribe__Events__Linked_Posts::instance()->get_linked_post_types());
     }
 }
 

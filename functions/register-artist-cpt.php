@@ -92,6 +92,12 @@ function bfw_cmb2_artist_metaboxes()
     ));
 
     $cmb->add_field(array(
+        'name' => 'YouTube URL',
+        'id' => $prefix . 'youtube',
+        'type' => 'text_url'
+    ));
+
+    $cmb->add_field(array(
         'name' => 'Website URL',
         'id' => $prefix . 'website',
         'type' => 'text_url'

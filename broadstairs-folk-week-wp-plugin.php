@@ -3,7 +3,7 @@
  * Plugin Name: Broadstairs Folk Week WP Plugin
  * Plugin URI: https://github.com/danwatford/broadstairs-folk-week-wp-plugin
  * Description: Wordpress customisations required for the Broadstairs Folk Week website.
- * Version: 0.1
+ * Version: 0.2
  * Author: Watford Consulting Ltd.
  * Author URI: https://www.watfordconsulting.com/
  * License: GPL v2 or later

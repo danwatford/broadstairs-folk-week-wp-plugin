@@ -33,5 +33,13 @@ function bfw_link_artist_cpt_to_events()
     }
 }
 
+/**
+ * Override the all events link to refer to the day-by-day events page.
+ */
+function bfw_override_all_events_link($all_events_link) {
+    return "/whats-on/day-by-day/";
+}
+
 add_filter('tribe_events_register_default_linked_post_types', 'bfw_tribe_remove_organizers_from_events');
 add_action('init', 'bfw_link_artist_cpt_to_events', 20);
+add_filter('tribe_get_events_link', 'bfw_override_all_events_link');
